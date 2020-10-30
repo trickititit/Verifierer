@@ -1,20 +1,17 @@
 //
-//  TabbarViewController.swift
+//  ReviewViewController.swift
 //  Verifierer
 //
-//  Created by Георгий Андреев on 07.10.2020.
+//  Created by Георгий Андреев on 24.10.2020.
 //
 
 import UIKit
 
-class TabbarViewController: UITabBarController {
-
-    @IBAction func bbb(_ sender: UIButton) {
-    }
+class ReviewViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // Do any additional setup after loading the view.
     }
     

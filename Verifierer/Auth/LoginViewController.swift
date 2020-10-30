@@ -9,15 +9,37 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
-    @IBOutlet weak var emailInput: UITextField!
-    @IBOutlet weak var passwordInput: UITextField!
-    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var mail: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        setIcon(iconName: "mail", input: emailInput)
-        setIcon(iconName: "lock", input: passwordInput)
+        
+//        setIcon(iconName: "mail", input: email)
+//        setIcon(iconName: "lock", input: passwordInput)
            
         // Do any additional setup after loading the view.
+        
+        let allViewsInXibArray = Bundle.main.loadNibNamed("Login", owner: self, options: nil)
+
+        //If you only have one view in the xib and you set it's class to MyView class
+        let myView = allViewsInXibArray?.first as! Login
+
+        //Set wanted position and size (frame)
+        myView.frame = self.view.bounds
+
+        //Add the view
+        self.view.addSubview(myView)
+    }
+    
+    @objc
+    private func login() {
+        UserDefaults.standard.set(true, forKey: "LOGGED_IN")
+        guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+            let sceneDelegate = windowScene.delegate as? SceneDelegate
+          else {
+            return
+          }
+        sceneDelegate.rootViewController.switchToMainScreen()
     }
     
     func setIcon (iconName: String, input: UITextField) {

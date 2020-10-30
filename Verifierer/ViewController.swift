@@ -16,9 +16,11 @@ class TwoViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var gendersInput: UITextField!
     @IBOutlet weak var NameInput: UITextField!
     @IBOutlet weak var passwordInput: UITextField!
-    @IBOutlet weak var sendButton: UIButton!
-    
+    @IBOutlet weak var sendButton: UIButton!    
     @IBOutlet weak var emailInput: UITextField!
+    
+    
+    
     let pickerView = ToolbarPickerView()
     var genderPickerValues = ["Мужской", "Женский", "Другой"]
     

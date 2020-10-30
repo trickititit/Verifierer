@@ -1,0 +1,24 @@
+PODS:
+  - Alamofire (5.2.2)
+  - BarcodeScanner (5.0.0)
+  - FloatRatingView (4.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 5.2)
+  - BarcodeScanner
+  - FloatRatingView (~> 4)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - BarcodeScanner
+    - FloatRatingView
+
+SPEC CHECKSUMS:
+  Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
+  BarcodeScanner: 2f5a53198eae49dc39bf61f2c1f05c04e01ff72d
+  FloatRatingView: bb6bdddfbeec51b1d387b4bd50abc27b4dfccd48
+
+PODFILE CHECKSUM: 1a2ca5a027c8ba29bcdb8378fef82932c2bc31c9
+
+COCOAPODS: 1.9.3
