@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-Verifierer/Pods-Verifierer-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/BarcodeScanner/BarcodeScanner.framework
+${BUILT_PRODUCTS_DIR}/FloatRatingView/FloatRatingView.framework
