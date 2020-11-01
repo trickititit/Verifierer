@@ -7,9 +7,17 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
     
-    @IBOutlet weak var mail: UITextField!
+    var newView = Login()
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+       return textField.resignFirstResponder()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,14 +29,16 @@ class LoginViewController: UIViewController {
         
         let allViewsInXibArray = Bundle.main.loadNibNamed("Login", owner: self, options: nil)
 
-        //If you only have one view in the xib and you set it's class to MyView class
-        let myView = allViewsInXibArray?.first as! Login
+        //If you only have one view in the xib and you set it's class to MyVi	ew class
+        self.newView = allViewsInXibArray?.first as! Login
 
         //Set wanted position and size (frame)
-        myView.frame = self.view.bounds
+        self.newView.frame = self.view.bounds
 
         //Add the view
-        self.view.addSubview(myView)
+        self.view.addSubview(self.newView)
+        self.newView.mail.delegate = self
+        self.newView.password.delegate = self
     }
     
     @objc

@@ -11,6 +11,11 @@ import Alamofire
 
 class AddReviewViewController: UIViewController {
     
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     var newView = AddReview()
     var raringValue = 0
     var photo = ""
@@ -30,6 +35,7 @@ class AddReviewViewController: UIViewController {
         self.newView.delegate = self
         
         self.newView.imagePicker = ImagePicker(presentationController: self, delegate: self)
+        self.newView.delegate = self
     }
 
 }
@@ -61,7 +67,7 @@ extension AddReviewViewController: AddReviewDelegate {
                    method: .post,
                    parameters: review,
                    encoder: JSONParameterEncoder.default).validate().response { response in
-                    debugPrint(response)
+//                    debugPrint(response)
                     if(response.response?.statusCode == 200) {
                         guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
                             let sceneDelegate = windowScene.delegate as? SceneDelegate

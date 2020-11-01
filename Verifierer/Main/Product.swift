@@ -8,6 +8,8 @@
 import UIKit
 
 class Product: UIView {
+    
+    var delegate:ProductDelegate?
 
 
     @IBOutlet weak var productInfoTable: UITableView!
@@ -15,12 +17,12 @@ class Product: UIView {
     @IBOutlet weak var topView: UIView!
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var desc: UITextView!
-
-    @IBOutlet weak var reviews: UICollectionView!
     
+    
+    @IBOutlet weak var reviews: UICollectionView!
     @IBOutlet weak var reviewsLayout: UICollectionViewFlowLayout!
+    
     @IBAction func addReview(_ sender: UIButton) {
-//        print("fdsafasdfas")
         guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
             let sceneDelegate = windowScene.delegate as? SceneDelegate
           else {
@@ -30,12 +32,13 @@ class Product: UIView {
     }
     
     @IBAction func back(_ sender: UIButton) {
-        guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
-            let sceneDelegate = windowScene.delegate as? SceneDelegate
-          else {
-            return
-          }
-        sceneDelegate.rootViewController.switchToMainScreen()
+        self.delegate?.send()
+//        guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+//            let sceneDelegate = windowScene.delegate as? SceneDelegate
+//          else {
+//            return
+//          }
+//        sceneDelegate.rootViewController.switchToMainScreen()
     }
     /*
     // Only override draw() if you perform custom drawing.
@@ -46,3 +49,8 @@ class Product: UIView {
     */
 
 }
+
+protocol ProductDelegate {
+    func send()
+}
+

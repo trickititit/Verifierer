@@ -16,6 +16,16 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     var genderId: Int?
     var bod: String?
     
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+       return textField.resignFirstResponder()
+    }
+    
+    
     @objc func tapDone() {
         if let datePicker = self.newView.dateInput.inputView as? UIDatePicker { // 2-1
             let dateformatter = DateFormatter() // 2-2
@@ -66,6 +76,11 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
 
         self.pickerView.reloadAllComponents()
         self.newView.dateInput.setInputViewDatePicker(target: self, selector: #selector(tapDone))
+        self.newView.emailInput.delegate = self
+        self.newView.passwordInput.delegate = self
+        self.newView.gendersInput.delegate = self
+        self.newView.nameInput.delegate = self
+        self.newView.dateInput.delegate = self
     }
     
     func setIcon (iconName: String, input: UITextField) {

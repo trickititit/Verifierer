@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class ProductViewController: UIViewController {
     
@@ -58,6 +59,7 @@ class ProductViewController: UIViewController {
         scrollView.contentSize = CGSize(width: screenWidth, height: self.newView.rootView.frame.size.height - 100)
         view.addSubview(scrollView)
         scrollView.addSubview(self.newView)
+        self.newView.delegate = self
         collectionViewSetup()
     }
     
@@ -101,11 +103,6 @@ extension ProductViewController: UITableViewDelegate, UITableViewDataSource {
     
 }
 
-
-extension ProductViewController: UICollectionViewDelegate {
-
-}
-
 extension ProductViewController: UICollectionViewDataSource {
     
     
@@ -146,5 +143,30 @@ func collectionView(_ collectionView: UICollectionView, layout collectionViewLay
 func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
     return 10
 }
+}
+
+extension ProductViewController: ProductDelegate {
+    
+    func send() {
+        let review = ReviewForm(productId: NetworkService.product!.id, bonusShopId: NetworkService.shopID, review: "", stars: 0, photo: "")
+        
+        AF.request(NetworkService.BaseUrl + "rewiews/add",
+                   method: .post,
+                   parameters: review,
+                   encoder: JSONParameterEncoder.default).validate().response { response in
+                    debugPrint(response)
+                    if(response.response?.statusCode == 200) {
+                        guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+                            let sceneDelegate = windowScene.delegate as? SceneDelegate
+                          else {
+                            return
+                          }
+                        sceneDelegate.rootViewController.showSplashScreen()
+                    } else {
+                        
+                    }
+        }
+    }
+    
 }
 
