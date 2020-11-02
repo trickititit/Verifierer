@@ -42,11 +42,10 @@ class ProfileViewController: UIViewController {
         
         self.newView.table.delegate = self
         self.newView.table.dataSource = self
+        self.newView.table.tableFooterView = UIView()
 
         
-        self.newView.avatar.layer.borderWidth = 1
         self.newView.avatar.layer.masksToBounds = false
-        self.newView.avatar.layer.borderColor = UIColor.black.cgColor
         self.newView.avatar.layer.cornerRadius = self.newView.avatar.frame.height/2
         self.newView.avatar.clipsToBounds = true
         self.newView.avatar.image = NetworkService.avatar

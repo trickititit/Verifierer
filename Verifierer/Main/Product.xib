@@ -21,7 +21,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gb.png" translatesAutoresizingMaskIntoConstraints="NO" id="j60-3Z-ugY">
-                                    <rect key="frame" x="-6.5" y="0.0" width="427" height="250"/>
+                                    <rect key="frame" x="-103.5" y="0.0" width="621" height="250"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="250" id="XWW-z9-0Tf"/>
                                     </constraints>
@@ -30,7 +30,7 @@
                                     <rect key="frame" x="101" y="87" width="212" height="136"/>
                                 </imageView>
                                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y73-Ib-TOr">
-                                    <rect key="frame" x="41" y="100" width="76" height="24"/>
+                                    <rect key="frame" x="17" y="100" width="76" height="24"/>
                                     <color key="tintColor" red="0.1333333333" green="0.1960784314" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <state key="normal" title="Назад" image="chevron.backward" catalog="system">
                                         <color key="titleColor" red="0.1333333333" green="0.1960784314" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -41,14 +41,14 @@
                                 </button>
                             </subviews>
                             <constraints>
-                                <constraint firstItem="y73-Ib-TOr" firstAttribute="leading" secondItem="aLb-bM-uSf" secondAttribute="leading" constant="46" id="BIK-Hu-yFk"/>
                                 <constraint firstItem="FxO-us-cVi" firstAttribute="height" secondItem="aLb-bM-uSf" secondAttribute="height" multiplier="0.544" id="Du0-HK-B2N"/>
                                 <constraint firstAttribute="bottom" secondItem="FxO-us-cVi" secondAttribute="bottom" constant="27" id="ELm-un-EW3"/>
                                 <constraint firstItem="FxO-us-cVi" firstAttribute="centerX" secondItem="aLb-bM-uSf" secondAttribute="centerX" id="Ea4-sp-iiw"/>
                                 <constraint firstAttribute="bottom" secondItem="y73-Ib-TOr" secondAttribute="bottom" constant="122" id="O9X-iB-poo"/>
                                 <constraint firstItem="FxO-us-cVi" firstAttribute="width" secondItem="aLb-bM-uSf" secondAttribute="width" multiplier="0.512077" id="Wyq-P8-eAT"/>
                                 <constraint firstItem="j60-3Z-ugY" firstAttribute="centerX" secondItem="aLb-bM-uSf" secondAttribute="centerX" id="fIf-Yo-Qww"/>
-                                <constraint firstItem="j60-3Z-ugY" firstAttribute="width" secondItem="aLb-bM-uSf" secondAttribute="width" multiplier="1.0314" id="h84-Xj-k7A"/>
+                                <constraint firstItem="FxO-us-cVi" firstAttribute="leading" secondItem="y73-Ib-TOr" secondAttribute="trailing" constant="8" symbolic="YES" id="fpo-tJ-MRg"/>
+                                <constraint firstItem="j60-3Z-ugY" firstAttribute="width" secondItem="aLb-bM-uSf" secondAttribute="width" multiplier="1.5" id="h84-Xj-k7A"/>
                                 <constraint firstAttribute="height" constant="250" id="jxp-h2-nzu"/>
                                 <constraint firstAttribute="bottom" secondItem="j60-3Z-ugY" secondAttribute="bottom" id="r1R-Tj-Uhz"/>
                             </constraints>
@@ -72,7 +72,7 @@
                                     <constraints>
                                         <constraint firstAttribute="height" constant="207" id="FXA-La-K77"/>
                                     </constraints>
-                                    <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                     <color key="textColor" systemColor="labelColor"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>

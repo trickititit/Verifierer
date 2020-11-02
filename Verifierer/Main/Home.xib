@@ -15,7 +15,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gb" translatesAutoresizingMaskIntoConstraints="NO" id="6BW-AK-YJQ">
-                    <rect key="frame" x="-41.5" y="5" width="497" height="896"/>
+                    <rect key="frame" x="-103.5" y="-84.5" width="621" height="1075"/>
                 </imageView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a7N-Zr-XSg">
                     <rect key="frame" x="20" y="44" width="102" height="100"/>
@@ -24,7 +24,7 @@
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ты имеешь 200 бонусов" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ViY-PF-dZc">
                     <rect key="frame" x="138" y="92" width="256" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
                     <color key="textColor" red="0.42352941179999998" green="0.18823529410000001" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -41,7 +41,7 @@
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Привет" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LqC-6i-CBM">
                     <rect key="frame" x="138" y="59" width="256" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" name="NotoSansMyanmar-Bold" family="Noto Sans Myanmar" pointSize="17"/>
+                    <fontDescription key="fontDescription" name="NotoSansMyanmar-Bold" family="Noto Sans Myanmar" pointSize="15"/>
                     <color key="textColor" red="0.1333333333" green="0.1960784314" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -50,13 +50,13 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="vrl-a7-4yi" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.903382" id="05S-MK-yUl"/>
-                <constraint firstItem="6BW-AK-YJQ" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="1.2" id="II7-h6-dEP"/>
+                <constraint firstItem="6BW-AK-YJQ" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="1.5" id="II7-h6-dEP"/>
                 <constraint firstItem="vrl-a7-4yi" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.647321" id="Xi5-dR-VjK"/>
                 <constraint firstItem="6BW-AK-YJQ" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="fCQ-ag-fIu"/>
                 <constraint firstItem="vrl-a7-4yi" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="hVl-l4-Gxj"/>
                 <constraint firstItem="vrl-a7-4yi" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="125" id="kKE-nA-FeQ"/>
                 <constraint firstItem="6BW-AK-YJQ" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="o7I-45-NQQ"/>
-                <constraint firstItem="6BW-AK-YJQ" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" id="ze0-Wb-UrL"/>
+                <constraint firstItem="6BW-AK-YJQ" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="1.2" id="ze0-Wb-UrL"/>
             </constraints>
             <connections>
                 <outlet property="avatar" destination="a7N-Zr-XSg" id="lSe-We-Ud6"/>

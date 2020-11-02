@@ -80,7 +80,7 @@ extension AddReviewViewController: AddReviewDelegate {
                           }
                         sceneDelegate.rootViewController.showSplashScreen()
                     } else {
-                        let alert = UIAlertController(title: "Ошибка добавления отзыва", message: "Ошибка", preferredStyle: .alert)
+                        let alert = UIAlertController(title: "Ошибка добавления отзыва", message: "Ошибка " + String(response.response!.statusCode) + " " + String(decoding: response.data!, as: UTF8.self), preferredStyle: .alert)
 
                         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
 

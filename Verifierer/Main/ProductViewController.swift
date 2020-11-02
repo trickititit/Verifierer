@@ -143,6 +143,7 @@ func collectionView(_ collectionView: UICollectionView, layout collectionViewLay
 func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
     return 10
 }
+    		
 }
 
 extension ProductViewController: ProductDelegate {

@@ -45,7 +45,7 @@
                 <constraint firstItem="pq3-AI-xtc" firstAttribute="centerY" secondItem="tPh-ps-p26" secondAttribute="centerY" id="fRb-kl-nTu"/>
                 <constraint firstItem="pq3-AI-xtc" firstAttribute="width" relation="greaterThanOrEqual" secondItem="G9g-7V-Fab" secondAttribute="width" multiplier="1.5" id="gV4-rA-AEd"/>
                 <constraint firstItem="CFx-Ty-Coe" firstAttribute="centerX" secondItem="tPh-ps-p26" secondAttribute="centerX" id="uvA-9m-f3m"/>
-                <constraint firstItem="pq3-AI-xtc" firstAttribute="height" relation="greaterThanOrEqual" secondItem="G9g-7V-Fab" secondAttribute="height" multiplier="1.05804" id="vxI-IA-zSL"/>
+                <constraint firstItem="pq3-AI-xtc" firstAttribute="height" relation="greaterThanOrEqual" secondItem="G9g-7V-Fab" secondAttribute="height" multiplier="1.2" id="vxI-IA-zSL"/>
                 <constraint firstItem="pq3-AI-xtc" firstAttribute="centerX" secondItem="tPh-ps-p26" secondAttribute="centerX" id="y5L-xR-qmO"/>
                 <constraint firstItem="CFx-Ty-Coe" firstAttribute="width" secondItem="G9g-7V-Fab" secondAttribute="width" multiplier="0.8" id="zLs-tZ-kxa"/>
             </constraints>

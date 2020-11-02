@@ -27,9 +27,7 @@ class HomeViewController: UIViewController {
         self.newView.bonus.text = "На Вашем счету " + String(NetworkService.user!.bonusesSummary) + " бонусов."
         self.newView.avatar.image = NetworkService.avatar
         
-        self.newView.avatar.layer.borderWidth = 1
         self.newView.avatar.layer.masksToBounds = false
-        self.newView.avatar.layer.borderColor = UIColor.black.cgColor
         self.newView.avatar.layer.cornerRadius = self.newView.avatar.frame.height/2
         self.newView.avatar.clipsToBounds = true
         

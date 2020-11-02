@@ -33,10 +33,8 @@ class ReviewCell: UICollectionViewCell {
                 }
             }
         }
-        
-        self.avatar.layer.borderWidth = 1
+        self.text.frame.size.height = calculatedHeight(for: review.description, width: self.text.frame.size.width)
         self.avatar.layer.masksToBounds = false
-        self.avatar.layer.borderColor = UIColor.black.cgColor
         self.avatar.layer.cornerRadius = self.avatar.frame.height/2
         self.avatar.clipsToBounds = true
         
@@ -62,5 +60,14 @@ class ReviewCell: UICollectionViewCell {
         self.date.text = formatter3.string(from: date!)
 
 }
+    
+    func calculatedHeight(for text: String, width: CGFloat) -> CGFloat {
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: width,
+                                          height: .greatestFiniteMagnitude))
+        label.numberOfLines = 0
+        label.text = text
+        label.sizeToFit()
+        return label.frame.height
+    }
     
 }
