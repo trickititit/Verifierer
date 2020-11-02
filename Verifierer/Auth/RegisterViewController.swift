@@ -44,6 +44,8 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.bod = ""
+        self.genderId = 1
 
         // Do any additional setup after loading the view.
         
