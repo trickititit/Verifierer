@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -43,7 +43,7 @@
                 <constraint firstItem="tPh-ps-p26" firstAttribute="bottom" secondItem="CFx-Ty-Coe" secondAttribute="bottom" constant="36" id="8XY-qg-CrW"/>
                 <constraint firstItem="CFx-Ty-Coe" firstAttribute="height" secondItem="G9g-7V-Fab" secondAttribute="height" multiplier="0.668527" id="Qnd-TY-sfg"/>
                 <constraint firstItem="pq3-AI-xtc" firstAttribute="centerY" secondItem="tPh-ps-p26" secondAttribute="centerY" id="fRb-kl-nTu"/>
-                <constraint firstItem="pq3-AI-xtc" firstAttribute="width" relation="greaterThanOrEqual" secondItem="G9g-7V-Fab" secondAttribute="width" multiplier="1.14493" id="gV4-rA-AEd"/>
+                <constraint firstItem="pq3-AI-xtc" firstAttribute="width" relation="greaterThanOrEqual" secondItem="G9g-7V-Fab" secondAttribute="width" multiplier="1.5" id="gV4-rA-AEd"/>
                 <constraint firstItem="CFx-Ty-Coe" firstAttribute="centerX" secondItem="tPh-ps-p26" secondAttribute="centerX" id="uvA-9m-f3m"/>
                 <constraint firstItem="pq3-AI-xtc" firstAttribute="height" relation="greaterThanOrEqual" secondItem="G9g-7V-Fab" secondAttribute="height" multiplier="1.05804" id="vxI-IA-zSL"/>
                 <constraint firstItem="pq3-AI-xtc" firstAttribute="centerX" secondItem="tPh-ps-p26" secondAttribute="centerX" id="y5L-xR-qmO"/>

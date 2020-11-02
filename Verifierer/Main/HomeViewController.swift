@@ -70,6 +70,7 @@ class HomeViewController: UIViewController {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath)
             as? HistoryCell else { return UICollectionViewCell() }
         let index = indexPath.item
+        print(index)
         let history = NetworkService.history!.items[index]
         cell.setup2(history: history)
 //        cell.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tap(_:))))
@@ -77,7 +78,7 @@ class HomeViewController: UIViewController {
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return NetworkService.history!.count
+        return NetworkService.history!.items.count
     }
 
     func numberOfSections(in collectionView: UICollectionView) -> Int {

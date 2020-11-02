@@ -58,9 +58,13 @@ extension AddReviewViewController: FloatRatingViewDelegate {
 
 extension AddReviewViewController: AddReviewDelegate {
     func send() {
+        var strBase64 = ""
         
-        let strBase64 = self.newView.image.image!.jpegData(compressionQuality: 1)?.base64EncodedString() ?? ""
-        
+        if (self.newView.image.image != nil) {
+            strBase64 = self.newView.image.image!.jpegData(compressionQuality: 1)?.base64EncodedString() ?? ""
+        } else {
+            strBase64 = ""
+        }
         let review = ReviewForm(productId: NetworkService.product!.id, bonusShopId: NetworkService.shopID, review: self.newView.reviewText.text, stars: self.raringValue, photo: strBase64)
         
         AF.request(NetworkService.BaseUrl + "rewiews/add",
@@ -76,7 +80,13 @@ extension AddReviewViewController: AddReviewDelegate {
                           }
                         sceneDelegate.rootViewController.showSplashScreen()
                     } else {
-                        
+                        let alert = UIAlertController(title: "Ошибка добавления отзыва", message: "Ошибка", preferredStyle: .alert)
+
+                        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+
+
+                        self.present(alert, animated: true, completion: nil)
+                                            
                     }
         }
     }
