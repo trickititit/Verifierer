@@ -187,9 +187,9 @@ extension RegisterViewController: RegisterDelegate {
                         let alert = UIAlertController(title: "Ошибка регистрации", message: "Ошибка", preferredStyle: .alert)
 
                         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-                        let window = UIApplication.shared.windows.filter {$0.isKeyWindow}.first
 
-                        window?.rootViewController?.present(alert, animated: true, completion: nil)
+
+                        self.present(alert, animated: true, completion: nil)
                     }
         }
     }
